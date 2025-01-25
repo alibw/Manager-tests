@@ -1,0 +1,20 @@
+# @import ./PreScript.http
+### AddUser_Repeated
+
+POST /AddUser
+Content-Type: application/json
+
+{
+    "Name": "Joe",
+    "Mobile": "09121234567"
+}
+
+?? status == 400
+
+{{
+const {expect} = require('chai');
+test("Message", function () {
+    var message = response.body;
+    expect(message).to.eql("This user already exists");
+});
+}}

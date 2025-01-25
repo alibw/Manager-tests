@@ -1,0 +1,9 @@
+# @import ./PreScript.http
+### AllowStaffRole_Fail
+
+POST /AllowStaffRole
+    ?id=1
+    &staffId=2
+    &role=Manager
+
+?? status == 400

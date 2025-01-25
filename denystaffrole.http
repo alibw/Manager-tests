@@ -1,0 +1,25 @@
+# @import ./PreScript.http
+### DenyStaffRole
+
+PUT /DenyStaffRole
+    ?id=1
+    &staffId=2
+    &role=Admin
+Content-Type: application/json
+
+?? status == 204
+
+{{
+ const axios = require('axios');
+ const {expect} = require('chai');
+
+ const wait = axios.get(`${host}/GetUsers`).then(response => {
+        test("Check", () => {
+        var jsonData = response.data;
+        let targetUser = jsonData.filter(user => user.ID === 1);
+        expect(targetUser[0].DeniedRoles[0]).to.eql("Admin");
+    });
+    })
+
+    exports.wait = wait;
+}}

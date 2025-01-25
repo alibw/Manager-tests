@@ -1,0 +1,16 @@
+# @import ./PreScript.http
+### RemoveUserStaff_Fail
+
+PUT /RemoveUserStaff
+    ?id=1
+    &staffId=1
+
+?? status == 400
+
+{{
+const {expect} = require('chai');
+
+test("Message", function () {
+    expect(response.body).to.be.equal("User has not this staff");
+});
+}}

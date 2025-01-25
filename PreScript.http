@@ -1,0 +1,56 @@
+{{
+//     var cookie = `Claims=${pm.environment.get("Claims")};Token=${pm.environment.get("Token")}`;
+// pm.request.headers.add({key: 'Cookie', value: cookie });
+   const axios = require('axios');
+
+var getUsers = {
+    url: `${{host}}/GetUsers`,
+    header: {
+        // 'Cookie': cookie,
+    },
+};
+
+$global.GetUsers = getUsers;
+
+let database = {
+  "Role": [{ "Name": "Manager" }, { "Name": "Developer" }, { "Name": "Admin" }, {"Name": "Designer"}, {"Name": "Tester"}],
+  "User": [
+    {
+      "ID": 1,
+      "Name": "Joe",
+      "Roles": ["Admin", "Developer"],
+      "Staffs": ["Modir Fanni"],
+      "DeniedRoles": [],
+      "Mobile": "09351234567"
+    },
+    {
+      "ID": 2,
+      "Name": "Matthew",
+      "Roles": ["Manager"],
+      "Staffs": ["Modir Mali"],
+      "DeniedRoles": ["Admin"],
+      "Mobile": "09371234567"
+    }
+  ],
+  "Staff": [
+    { "ID": 1, "Name": "Modir Mali", "Roles": ["Admin"] },
+    { "ID": 2, "Name": "Modir Fanni", "Roles": ["Admin"] },
+    { "ID": 3, "Name": "Modir ManabeEnsani", "Roles": ["Admin"] }
+  ]
+};
+
+axios({
+    url: `${{host}}/Reset`,
+    method: 'POST',
+    headers: {
+        // 'Cookie': cookie,
+        'content-type': 'application/json'
+    },
+    data:{
+        mode: 'raw',
+        raw: database
+    }
+}, function (err, res) {
+    console.log(res);
+});
+}}

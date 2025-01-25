@@ -1,0 +1,31 @@
+# @import ./PreScript.http
+### AddUser
+
+POST /AddUser
+Content-Type: application/json
+
+{
+    "Name": "Frank",
+    "Mobile": "09121234567"
+}
+
+?? status == 200
+
+{{
+const axios = require('axios');
+const {expect} = require('chai');
+test("Response", function () {
+    var jsonData = JSON.parse(response.body);
+    expect(jsonData.ID).gt(0);
+});
+
+    const wait = axios.get(`${host}/GetUsers`).then(response => {
+        test("Check", () => {
+        var jsonData = response.data;
+        expect(jsonData).to.have.lengthOf(3);
+        expect(jsonData[2].Name).to.eql("Frank");
+        })
+    });
+    exports.wait = wait;
+}}
+

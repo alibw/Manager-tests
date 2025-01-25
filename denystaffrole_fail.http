@@ -1,0 +1,16 @@
+# @import ./PreScript.http
+### DenyStaffRole_Fail
+
+PUT /DenyStaffRole
+    ?id=2
+    &staffId=1
+    &role=Admin
+
+?? status == 400
+
+{{
+test("Message", function () {
+    const {expect} = require('chai');
+    expect(response.body)to.be.equal("This role is already Denied!");
+});
+}}

@@ -1,0 +1,14 @@
+# @import ./PreScript.http
+### AddUserStaff_Fail
+
+POST /AddUserStaff
+    ?id=1
+    &staffId=2
+
+?? status == 400
+
+{{
+test("Message", function () {
+    epxect(response.body).to.be.equal("This user already has this staff");
+});
+}}

@@ -1,0 +1,15 @@
+# @import ./PreScript.http
+### AddUserRole_Fail
+
+POST /AddUserRole
+    ?id=1
+    &role=Admin
+
+?? status == 400
+
+{{
+const {expect} = require('chai');
+test("Message", function () {
+    expect(response.body).to.be.equal("This user already has this role");
+});
+}}
