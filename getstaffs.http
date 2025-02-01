@@ -4,14 +4,6 @@
 GET /GetStaffs
 
 ?? status == 200
-
-{{
- const {expect} = require('chai');
-
-test("Staff", function () {
-    var jsonData = JSON.parse(response.body);
-    expect(jsonData[0].Name).to.eql("Modir Mali");
-    expect(jsonData[0].Roles).to.have.lengthOf(1);
-    expect(jsonData[0].Roles[0]).to.eql("Admin");
-});
-}}
+?? js response.parsedBody[0].Name == Modir Mali
+?? js response.parsedBody[0].Roles.length == 1
+?? js response.parsedBody[0].Roles[0] == Admin

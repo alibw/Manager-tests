@@ -9,17 +9,8 @@ Content-Type: application/json
 
 ?? status == 204
 
-{{
- const axios = require('axios');
- const {expect} = require('chai');
+### GetUsers
+GET /GetUsers
 
- const wait = axios.get(`${host}/GetUsers`).then(response => {
-        test("Check", () => {
-        var jsonData = response.data;
-        let targetUser = jsonData.filter(user => user.ID === 1);
-        expect(targetUser[0].DeniedRoles[0]).to.eql("Admin");
-    });
-    })
-
-    exports.wait = wait;
-}}
+?? body length == 3
+?? js response.parsedBody[0].DeniedRoles[0] == Admin

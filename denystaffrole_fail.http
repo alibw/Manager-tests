@@ -7,10 +7,4 @@ PUT /DenyStaffRole
     &role=Admin
 
 ?? status == 400
-
-{{
-test("Message", function () {
-    const {expect} = require('chai');
-    expect(response.body)to.be.equal("This role is already Denied!");
-});
-}}
+?? body == This role is already Denied!

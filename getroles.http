@@ -4,13 +4,5 @@
 GET /GetRoles
 
 ?? status == 200
-
-{{
-const {expect} = require('chai');
-
-test("Role", function () {
-    var jsonData = JSON.parse(response.body);
-    expect(jsonData).to.have.lengthOf(5);
-    expect(jsonData[0].Name).to.eql("Manager");
-});
-}}
+?? body length == 5
+?? js response.parsedBody[0].Name == Manager

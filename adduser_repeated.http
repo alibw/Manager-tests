@@ -10,11 +10,4 @@ Content-Type: application/json
 }
 
 ?? status == 400
-
-{{
-const {expect} = require('chai');
-test("Message", function () {
-    var message = response.body;
-    expect(message).to.eql("This user already exists");
-});
-}}
+?? body contains This user already

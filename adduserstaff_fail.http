@@ -6,9 +6,4 @@ POST /AddUserStaff
     &staffId=2
 
 ?? status == 400
-
-{{
-test("Message", function () {
-    epxect(response.body).to.be.equal("This user already has this staff");
-});
-}}
+?? body == This user already has this staff
