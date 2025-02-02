@@ -1,4 +1,5 @@
 # @import ./PreScript.http
+# @forceRef PreRequest
 ### AllowStaffRole
 
 POST /AllowStaffRole

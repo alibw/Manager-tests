@@ -1,4 +1,5 @@
 # @import ./PreScript.http
+# @forceRef PreRequest
 ### RemoveUserStaff_Fail
 
 PUT /RemoveUserStaff
