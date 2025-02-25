@@ -1,7 +1,10 @@
 {
     "environments": {
       "mock": {
-        "host": "https://48627b7b-8c29-4c03-a6b9-8b0c27648381.mock.pstmn.io"
+        "host": "https://nwind.rayvarz.link/Server/Services/Manager",
+        "claims":"%7B%22iss%22%3A%22Rayvarz%22%2C%22exp%22%3A1740120465%2C%22MobileNumber%22%3A%2209125620784%22%2C%22Database%22%3A%22Demo%22%2C%22Databases%22%3A%22Kish%2CTest_SME%2CNorthwind%2CDemo%22%2C%22User%22%3A%22Zeinab%22%2C%22UserID%22%3A%225620784-0912%22%2C%22Organization%22%3A%22ghanbari%22%2C%22ParseUser%22%3A%22beFVXpqMxj%22%7D",
+        "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJSYXl2YXJ6IiwiZXhwIjoxNzQyODAwNjI5LCJNb2JpbGVOdW1iZXIiOiIwOTEyNTYyMDc4NCIsIkRhdGFiYXNlIjoiRGVtbyIsIkRhdGFiYXNlcyI6Iktpc2gsVGVzdF9TTUUsTm9ydGh3aW5kLERlbW8iLCJVc2VyIjoiWmVpbmFiIiwiVXNlcklEIjoiNTYyMDc4NC0wOTEyIiwiT3JnYW5pemF0aW9uIjoiZ2hhbmJhcmkiLCJQYXJzZVVzZXIiOiJiZUZWWHBxTXhqIn0.J7aDU3Ba1sX5eolcwH5SBVzvZw0ql5F2jLJrZSaxBX705s-bgyFED0ezIo2cF0-sj4riqgkauRDNM2DLFe72Tx3c9JQgtTe6PgLzUVjDfWKVWPEtu9XiY9iUQE-25XBGBhYW36Fv2OKQKvUWzlwX6woA-CSZfbeZmhvhzPjAmoKQgQmFP2V6gv3aA2M6-2H4zvyEyjtUdMjnc_79cMP4JS_g4P6797Qqt7dFWd3Spr3MTUrx721D81vgWwFGvCMSkWUhihrCuzNQLf629gIB3W3h3tMgLTrKf8Hd9BkvANVtzvL650U9jUJsSip_1qFyBWwr7Fk-hoBU4v-6vlbhlA",
+        "database":"Northwind"
       }
     }
   }
