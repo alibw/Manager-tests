@@ -10,6 +10,6 @@ PUT /RemoveUserRole
 
 ### GetUsers
 GET /GetUsers
-Cookie: Claims={{claims}};Token=${{token}};Database={{database}}
+Cookie: {{cookie}}
 
 ?? js response.parsedBody[1].Roles.length == 0

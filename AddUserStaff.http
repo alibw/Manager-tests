@@ -11,7 +11,7 @@ Content-Type: application/json
 
 ### GetUsers
 GET /GetUsers
-Cookie: Claims={{claims}};Token=${{token}};Database={{database}}
+Cookie: {{cookie}}
 
 ?? body length == 2
 ?? js response.parsedBody[0].Staffs.length == 2

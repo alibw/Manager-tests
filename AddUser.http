@@ -16,7 +16,7 @@ Content-Type: application/json
 ### GetUsers
 GET /GetUsers
 Content-Type: application/json
-Cookie: Claims={{claims}};Token=${{token}};Database={{database}}
+Cookie: {{cookie}}
 
 ?? body length == 3
 ?? js response.parsedBody[2].Name == Frank

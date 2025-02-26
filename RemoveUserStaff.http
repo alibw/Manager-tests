@@ -10,6 +10,6 @@ PUT /RemoveUserStaff
 
 ### GetUsers
 GET /GetUsers
-Cookie: Claims={{claims}};Token=${{token}};Database={{database}}
+Cookie: {{cookie}}
 
 ?? js response.parsedBody[0].Staffs.length == 0

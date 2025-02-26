@@ -3,7 +3,7 @@
 ### GetUsers
 
 GET /GetUsers
-Cookie: Claims={{claims}};Token=${{token}};Database={{database}}
+Cookie: {{cookie}}
 
 ?? status == 200
 ?? js response.parsedBody[0].Name == Joe

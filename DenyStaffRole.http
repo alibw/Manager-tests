@@ -12,7 +12,7 @@ Content-Type: application/json
 
 ### GetUsers
 GET /GetUsers
-Cookie: Claims={{claims}};Token=${{token}};Database={{database}}
+Cookie: {{cookie}}
 
 ?? body length == 3
 ?? js response.parsedBody[0].DeniedRoles[0] == Admin
