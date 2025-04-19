@@ -1,9 +1,9 @@
+### GetUsers
+# @no-cookie-jar
 # @import ./PreScript.http
 # @forceRef PreRequest
-### GetUsers
-
 GET /GetUsers
-Cookie: {{cookie}}
+Cookie: Claims={{claims}};Token={{token}};Database={{database}}
 
 ?? status == 200
 ?? js response.parsedBody[0].Name == Joe

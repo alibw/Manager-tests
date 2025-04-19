@@ -1,7 +1,8 @@
 # @name PreRequest
+# @no-cookie-jar
 POST /Reset
 Content-Type: application/json
-Cookie: {{cookie}}
+Cookie: Claims={{claims}};Token={{token}};Database={{database}}
 {
   "Role": [{ "Name": "Manager" }, { "Name": "Developer" }, { "Name": "Admin" }, {"Name": "Designer"}, {"Name": "Tester"}],
   "User": [
