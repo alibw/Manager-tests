@@ -1,17 +1,15 @@
 ### GetUsers
-# @no-cookie-jar
 # @import ./PreScript.http
 # @forceRef PreRequest
 GET /GetUsers
-Cookie: Claims={{claims}};Token={{token}};Database={{database}}
 
 ?? status == 200
 ?? js response.parsedBody[0].Name == Joe
 ?? js response.parsedBody[0].ID == 1
-?? js response.parsedBody[0].Roles[0] == Admin
-?? js response.parsedBody[0].Roles[1] == Developer
+?? js response.parsedBody[0].RolesName[0] == Admin
+?? js response.parsedBody[0].RolesName[1] == Developer
 ?? js response.parsedBody[0].Staffs.length == 1
-?? js response.parsedBody[0].Staffs[0] == Modir Fanni
+?? js response.parsedBody[0].Staffs[0].Name == Modir Fanni
 ?? js response.parsedBody[0].DeniedRoles.length == 0
 ?? js response.parsedBody[1].DeniedRoles.length == 1
 ?? js response.parsedBody[1].DeniedRoles[0] == Admin

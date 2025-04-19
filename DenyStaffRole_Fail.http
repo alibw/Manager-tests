@@ -1,6 +1,6 @@
+### DenyStaffRole_Fail
 # @import ./PreScript.http
 # @forceRef PreRequest
-### DenyStaffRole_Fail
 
 PUT /DenyStaffRole
     ?id=2

@@ -1,10 +1,8 @@
-# @import ./PreScript.http
-# @forceRef PreRequest
 ### GetStaffs
-
+# @import ./PreScript.http
 GET /GetStaffs
 
 ?? status == 200
 ?? js response.parsedBody[0].Name == Modir Mali
-?? js response.parsedBody[0].Roles.length == 1
-?? js response.parsedBody[0].Roles[0] == Admin
+?? js response.parsedBody[0].RolesName.length == 1
+?? js response.parsedBody[0].RolesName[0] == Admin

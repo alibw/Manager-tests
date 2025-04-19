@@ -1,7 +1,6 @@
+## RemoveUserRole
 # @import ./PreScript.http
 # @forceRef PreRequest
-### RemoveUserRole
-
 PUT /RemoveUserRole
     ?id=2
     &role=Manager
@@ -10,6 +9,6 @@ PUT /RemoveUserRole
 
 ### GetUsers
 GET /GetUsers
-Cookie: {{cookie}}
 
-?? js response.parsedBody[1].Roles.length == 0
+?? js response.parsedBody[1].RolesName.length == 1
+?? js response.parsedBody[1].RolesName[0] == Admin

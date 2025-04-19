@@ -1,6 +1,6 @@
+### AllowStaffRole_Fail
 # @import ./PreScript.http
 # @forceRef PreRequest
-### AllowStaffRole_Fail
 
 POST /AllowStaffRole
     ?id=1

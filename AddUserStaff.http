@@ -1,7 +1,6 @@
+### AddUserStaff
 # @import ./PreScript.http
 # @forceRef PreRequest
-### AddUserStaff
-
 POST /AddUserStaff
     ?id=1
     &staffId=1
@@ -11,8 +10,7 @@ Content-Type: application/json
 
 ### GetUsers
 GET /GetUsers
-Cookie: {{cookie}}
 
 ?? body length == 2
 ?? js response.parsedBody[0].Staffs.length == 2
-?? js response.parsedBody[0].Staffs[1] == Modir Mali
+?? js response.parsedBody[0].Staffs[1].Name == Modir Fanni

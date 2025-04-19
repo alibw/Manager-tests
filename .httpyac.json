@@ -6,7 +6,11 @@
         "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJSYXl2YXJ6IiwiZXhwIjoxNzQ3MDMyMDU2LCJpYXQiOjE3NDQ0NDAwNTcuMCwiTW9iaWxlTnVtYmVyIjoiMDkxMjU2MjA3ODQiLCJEYXRhYmFzZSI6IkRlbW8iLCJEYXRhYmFzZXMiOiJLaXNoLE5vcnRod2luZCxEZW1vIiwiVXNlciI6IlplaW5hYiIsIlVzZXJJRCI6IjU2MjA3ODQtMDkxMiIsIk9yZ2FuaXphdGlvbiI6ImdoYW5iYXJpIiwiUGFyc2VVc2VyIjoiYmVGVlhwcU14aiJ9.gme5N3uAP9JduWfyfS8vcbP7Esl5oyWtgULrkq1HPrTCczEBPVdgs5p9uI0eZfb8gOSDrZXH37Ep-xAw5yQbyN36HyFUiwrbJ6xApsS4aqSNqupzPgJ7g8gP0dw3AQFS-5xGWVHz90wN5FabSoYtVSpblRRKXDu1L38Rt7X-vPlEQXCczXyv0clJCSz8s2WeaVS3Vo3a7ogDWTzJjtY7ec1UivTZyfJ-HuRYwC9s5Y5_Hk7k5vEKvvuelCYx8ZndZ_bfGEJ_vApKtRk2fwkh2A6FBufa1uMt9Og4KtKRgC-rexH52akN_cGpYfZyTsQTzWFP5uaFkyRAG8LkgvniXg",
         "database": "Northwind"
       }
-    }
+    },
+    "defaultHeaders": {
+      "Cookie": "Claims={{claims}};Token={{token}};Database={{database}}"
+    },
+    "cookieJarEnabled": false
   }
   
   

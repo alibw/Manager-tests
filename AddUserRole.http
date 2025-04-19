@@ -1,6 +1,6 @@
+### AddUserRole
 # @import ./PreScript.http
 # @forceRef PreRequest
-### AddUserRole
 
 POST /AddUserRole
     ?id=2
@@ -11,8 +11,7 @@ Content-Type: application/json
 
 ### GetUsers
 GET /GetUsers
-Cookie: {{cookie}}
 
 ?? body length == 3
-?? js response.parsedBody[1].Roles.length == 1
-?? js response.parsedBody[1].Roles[1] == Developer
+?? js response.parsedBody[1].RolesNme.length == 3
+?? js response.parsedBody[1].Roles[2] == Developer

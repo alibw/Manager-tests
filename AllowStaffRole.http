@@ -1,6 +1,6 @@
+### AllowStaffRole
 # @import ./PreScript.http
 # @forceRef PreRequest
-### AllowStaffRole
 
 POST /AllowStaffRole
     ?id=2
@@ -11,5 +11,4 @@ POST /AllowStaffRole
 
 ### GetUsers
 GET /GetUsers
-Cookie: {{cookie}}
 ?? js response.parsedBody[1].DeniedRoles.length == 0

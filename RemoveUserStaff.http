@@ -1,7 +1,6 @@
+### RemoveUserStaff
 # @import ./PreScript.http
 # @forceRef PreRequest
-### RemoveUserStaff
-
 PUT /RemoveUserStaff
     ?id=1
     &staffId=2
@@ -10,6 +9,5 @@ PUT /RemoveUserStaff
 
 ### GetUsers
 GET /GetUsers
-Cookie: {{cookie}}
 
 ?? js response.parsedBody[0].Staffs.length == 0

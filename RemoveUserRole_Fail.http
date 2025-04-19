@@ -1,6 +1,6 @@
+### RemoveUserRole_Fail
 # @import ./PreScript.http
 # @forceRef PreRequest
-### RemoveUserRole_Fail
 
 PUT /RemoveUserRole
     ?id=1

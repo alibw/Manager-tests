@@ -1,7 +1,6 @@
+### GetRoles
 # @import ./PreScript.http
 # @forceRef PreRequest
-### GetRoles
-
 GET /GetRoles
 
 ?? status == 200
